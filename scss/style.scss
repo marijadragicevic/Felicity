@@ -1,0 +1,198 @@
+//import font
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Cutive+Mono&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Quicksand:wght@300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&family=Ubuntu:wght@300&family=Work+Sans:wght@300&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap");
+
+// VARIABLES
+$blue: #0000fe;
+$grey: #4e4e4e;
+$orange: #ff6600;
+$yellow: #f1bb17;
+$white: white;
+$transition: 0.6s ease;
+
+// MIXINS
+@mixin buttonDesign($padding, $fontSize, $borderRadius) {
+  border: none;
+  background-color: white;
+  padding: $padding;
+  font-size: $fontSize;
+  border-radius: $borderRadius;
+}
+
+// DEFAULT STYLES
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    transition: $transition;
+  }
+}
+ul {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+// HEADER SECTION
+
+header {
+  background-image: url("../images/banner.jpg");
+  background-position: top;
+  background-size: cover;
+  width: 100%;
+  height: 97vh;
+  color: $white;
+  background-attachment: fixed;
+
+  .container {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px 0px;
+
+      ul {
+        flex: 0 0 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        li {
+          padding: 0px 10px;
+          a {
+            color: white;
+            font-size: 1.1rem;
+
+            &:hover {
+              color: black;
+            }
+          }
+
+          button {
+            border-radius: 20px;
+            @include buttonDesign(10px 35px, 1.1rem, 20px);
+
+            &:hover {
+              background-color: $yellow;
+              transition: $transition;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 86vh;
+      justify-content: space-between;
+      text-align: center;
+
+      hgroup {
+        padding-top: 70px;
+        h2 {
+          font-size: 3.2rem;
+          font-weight: 500;
+        }
+        h3 {
+          font-weight: 500;
+          font-size: 3rem;
+        }
+        p {
+          padding: 15px 0px;
+          font-size: 1.1rem;
+          line-height: 1.6;
+        }
+        button {
+          margin: 30px 0px;
+          @include buttonDesign(18px 55px, 1.2rem, 10px);
+
+          &:hover {
+            background-color: $yellow;
+            transition: $transition;
+            border-radius: 25px;
+            color: white;
+          }
+        }
+      }
+
+      form {
+        // nisam siguran da li moze ovako
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: white;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        padding: 20px 50px 0px;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: gray;
+            padding: 10px 15px;
+          }
+          input {
+            border: none;
+            outline: none;
+            background-color: #eee;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 1rem;
+
+            &:focus {
+              border: 2px solid rgba(255, 136, 0, 0.911);
+            }
+          }
+        }
+
+        button {
+          margin: 0;
+          align-self: flex-end;
+          background-color: black;
+          border: none;
+          border-radius: 10px;
+          color: white;
+          font-size: 1.1rem;
+          padding: 10px 40px;
+
+          &:hover {
+            background-color: $yellow;
+            transition: $transition;
+            border-radius: 25px;
+          }
+        }
+      }
+    }
+  }
+}
