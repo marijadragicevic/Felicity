@@ -196,3 +196,107 @@ header {
     }
   }
 }
+
+// ACCOMMODATION AND BREAKFAST SECTION
+
+.accommodation {
+  .container {
+    padding: 80px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    hgroup {
+      flex: 0 0 40%;
+      font-size: 2.8rem;
+      color: #333;
+
+      h3 {
+        font-weight: 300;
+      }
+      h4 {
+        font-weight: 500;
+      }
+      p {
+        font-size: 1.2rem;
+        line-height: 1.9;
+        padding: 50px 0px;
+      }
+      button {
+        border: none;
+        background-color: black;
+        color: white;
+        font-size: 1.2rem;
+        padding: 15px 50px;
+        border-radius: 10px;
+
+        &:hover {
+          background-color: $yellow;
+          transition: $transition;
+          border-radius: 25px;
+        }
+      }
+    }
+
+    .images {
+      flex: 0 0 60%;
+
+      img {
+        padding: 10px;
+        float: right;
+      }
+    }
+  }
+}
+
+.breakfast {
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    hgroup {
+      flex: 0 0 40%;
+      font-size: 2.8rem;
+      color: #333;
+      text-align: right;
+
+      h3 {
+        font-weight: 300;
+      }
+      h4 {
+        font-weight: 500;
+      }
+      p {
+        font-size: 1.2rem;
+        line-height: 1.9;
+        padding: 30px 0px;
+      }
+      button {
+        border: none;
+        background-color: black;
+        color: white;
+        font-size: 1.1rem;
+        padding: 15px 40px;
+        border-radius: 10px;
+
+        &:hover {
+          background-color: $yellow;
+          transition: $transition;
+          border-radius: 25px;
+        }
+      }
+    }
+
+    .images {
+      flex: 0 0 60%;
+
+      img {
+        width: 80%;
+      }
+    }
+  }
+}

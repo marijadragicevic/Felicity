@@ -137,4 +137,74 @@ header {
           transition: 0.6s ease;
           border-radius: 25px; }
 
+.accommodation .container {
+  padding: 80px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  .accommodation .container hgroup {
+    flex: 0 0 40%;
+    font-size: 2.8rem;
+    color: #333; }
+    .accommodation .container hgroup h3 {
+      font-weight: 300; }
+    .accommodation .container hgroup h4 {
+      font-weight: 500; }
+    .accommodation .container hgroup p {
+      font-size: 1.2rem;
+      line-height: 1.9;
+      padding: 50px 0px; }
+    .accommodation .container hgroup button {
+      border: none;
+      background-color: black;
+      color: white;
+      font-size: 1.2rem;
+      padding: 15px 50px;
+      border-radius: 10px; }
+      .accommodation .container hgroup button:hover {
+        background-color: #f1bb17;
+        transition: 0.6s ease;
+        border-radius: 25px; }
+  .accommodation .container .images {
+    flex: 0 0 60%; }
+    .accommodation .container .images img {
+      padding: 10px;
+      float: right; }
+
+.breakfast .container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  .breakfast .container hgroup {
+    flex: 0 0 40%;
+    font-size: 2.8rem;
+    color: #333;
+    text-align: right; }
+    .breakfast .container hgroup h3 {
+      font-weight: 300; }
+    .breakfast .container hgroup h4 {
+      font-weight: 500; }
+    .breakfast .container hgroup p {
+      font-size: 1.2rem;
+      line-height: 1.9;
+      padding: 30px 0px; }
+    .breakfast .container hgroup button {
+      border: none;
+      background-color: black;
+      color: white;
+      font-size: 1.1rem;
+      padding: 15px 40px;
+      border-radius: 10px; }
+      .breakfast .container hgroup button:hover {
+        background-color: #f1bb17;
+        transition: 0.6s ease;
+        border-radius: 25px; }
+  .breakfast .container .images {
+    flex: 0 0 60%; }
+    .breakfast .container .images img {
+      width: 80%; }
+
 /*# sourceMappingURL=style.css.map */
