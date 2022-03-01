@@ -66,7 +66,7 @@ header {
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 97vh;
+  height: 97%;
   color: $white;
   background-attachment: fixed;
 
@@ -78,11 +78,22 @@ header {
       flex-wrap: wrap;
       padding: 20px 0px;
 
+      .menuIcon {
+        display: none;
+
+        @media (max-width: 1000px) {
+          display: flex;
+        }
+      }
       ul {
         flex: 0 0 40%;
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
 
         li {
           padding: 0px 10px;
@@ -119,18 +130,34 @@ header {
 
       hgroup {
         padding-top: 70px;
+
+        @media (max-width: 1000px) {
+          padding-top: 40px;
+        }
         h2 {
           font-size: 3.2rem;
           font-weight: 500;
+
+          @media (max-width: 1000px) {
+            font-size: 2.2rem;
+          }
         }
         h3 {
           font-weight: 500;
           font-size: 3rem;
+
+          @media (max-width: 1000px) {
+            font-size: 2rem;
+          }
         }
         p {
           padding: 15px 0px;
           font-size: 1.1rem;
           line-height: 1.6;
+
+          @media (max-width: 1000px) {
+            font-size: 1.2rem;
+          }
         }
         button {
           margin: 30px 0px;
@@ -157,10 +184,19 @@ header {
         border-top-right-radius: 40px;
         padding: 20px 50px 0px;
 
+        @media (max-width: 1000px) {
+          justify-content: flex-start;
+        }
+
         div {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+
+          @media (max-width: 1000px) {
+            width: 100%;
+            padding-bottom: 10px;
+          }
 
           label {
             font-size: 1rem;
@@ -168,6 +204,7 @@ header {
             color: gray;
             padding: 10px 15px;
           }
+
           input {
             border: none;
             outline: none;
@@ -179,11 +216,15 @@ header {
             &:focus {
               border: 2px solid rgba(255, 136, 0, 0.911);
             }
+
+            @media (max-width: 1000px) {
+              width: 100%;
+            }
           }
         }
 
         button {
-          margin: 0;
+          margin-top: 10px;
           align-self: flex-end;
           background-color: black;
           border: none;
@@ -196,6 +237,10 @@ header {
             background-color: $yellow;
             transition: $transition;
             border-radius: 25px;
+          }
+
+          @media (max-width: 1000px) {
+            margin-top: 20px;
           }
         }
       }
@@ -217,6 +262,12 @@ header {
       flex: 0 0 40%;
       font-size: 2.8rem;
       color: #333;
+
+      @media (max-width: 1000px) {
+        font-size: 2.2rem;
+        flex: 0 0 100%;
+        margin-top: 30%;
+      }
 
       h3 {
         font-weight: 300;
@@ -242,15 +293,27 @@ header {
           transition: $transition;
           border-radius: 25px;
         }
+
+        @media (max-width: 1000px) {
+          margin-bottom: 20px;
+        }
       }
     }
 
     .images {
       flex: 0 0 60%;
 
+      @media (max-width: 1000px) {
+        flex: 0 0 100%;
+      }
+
       img {
         padding: 10px;
         float: right;
+
+        @media (max-width: 1000px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -265,11 +328,21 @@ header {
     flex-wrap: wrap;
     padding-bottom: 50px;
 
+    @media (max-width: 1000px) {
+      flex-direction: column-reverse;
+    }
+
     hgroup {
       flex: 0 0 40%;
       font-size: 2.8rem;
       color: #333;
       text-align: right;
+
+      @media (max-width: 1000px) {
+        font-size: 2.2rem;
+        flex: 0 0 100%;
+        padding-top: 15px;
+      }
 
       h3 {
         font-weight: 300;
@@ -301,8 +374,16 @@ header {
     .images {
       flex: 0 0 60%;
 
+      @media (max-width: 1000px) {
+        flex: 0 0 100%;
+      }
+
       img {
         width: 80%;
+
+        @media (max-width: 1000px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -324,6 +405,11 @@ header {
 
     hgroup {
       flex: 0 0 50%;
+
+      @media (max-width: 1000px) {
+        flex: 0 0 100%;
+        padding-bottom: 20px;
+      }
       h3 {
         font-size: 3rem;
         font-weight: 500;
@@ -336,6 +422,9 @@ header {
     }
     img {
       width: 50%;
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
     }
   }
 }
@@ -344,7 +433,7 @@ header {
   background-image: url("../images/tes_bg.jpg");
   background-position: center;
   background-size: cover;
-  height: 80vh;
+  height: 100vh;
   background-attachment: fixed;
 
   // TESTIMONILA SECTION
@@ -367,20 +456,39 @@ header {
         color: white;
         flex: 0 0 25%;
 
+        @media (max-width: 1000px) {
+          flex: 0 0 100%;
+          margin-bottom: 10px;
+          padding: 10px;
+        }
+
         hgroup {
           display: flex;
           align-items: center;
           justify-content: space-between;
           padding: 20px 0px;
 
+          @media (max-width: 1000px) {
+            padding: 5px 0px;
+          }
+
           h4 {
             font-size: 1.5rem;
+
+            @media (max-width: 1000px) {
+              font-size: 1.2rem;
+            }
           }
         }
 
         p {
           line-height: 1.8;
           font-size: 1.2rem;
+
+          @media (max-width: 1000px) {
+            line-height: 1.2;
+            font-size: 1.2rem;
+          }
         }
       }
     }
@@ -403,6 +511,15 @@ header {
       background-color: $orange;
       border-radius: 25px;
       padding: 40px 20px;
+
+      @media (max-width: 1000px) {
+        flex: 0 0 100%;
+        margin-top: 500px;
+      }
+
+      @media (max-width: 768px) {
+        margin-top: 350px;
+      }
 
       input {
         width: 100%;
@@ -456,6 +573,10 @@ header {
   color: white;
   padding: 20px 0px;
 
+  @media (max-width: 1000px) {
+    padding-bottom: 500px;
+  }
+
   .container {
     display: flex;
     align-items: center;
@@ -466,21 +587,37 @@ header {
     hgroup {
       flex: 0 0 45%;
 
+      @media (max-width: 1000px) {
+        flex: 0 0 100%;
+      }
+
       h2 {
         font-size: 3.2rem;
         font-weight: 500;
         padding-bottom: 15px;
+
+        @media (max-width: 1000px) {
+          font-size: 2rem;
+        }
       }
       h3 {
         font-size: 2.5rem;
         font-weight: 500;
         padding-bottom: 15px;
+
+        @media (max-width: 1000px) {
+          font-size: 1.5rem;
+        }
       }
 
       p {
         font-size: 1.3rem;
         line-height: 1.5;
         padding-top: 10px;
+
+        @media (max-width: 1000px) {
+          font-size: 1rem;
+        }
       }
     }
   }
