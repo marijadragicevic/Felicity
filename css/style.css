@@ -12,12 +12,16 @@
   margin: auto; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
   a:hover {
     transition: 0.6s ease; }
 
 ul {
   list-style-type: none; }
+
+button {
+  cursor: pointer; }
 
 h1,
 h2,
@@ -230,38 +234,115 @@ header {
     .about .container img {
       width: 50%; }
 
-.testimonial {
+.main {
   background-image: url("../images/tes_bg.jpg");
   background-position: center;
   background-size: cover;
-  height: 80vh; }
-  .testimonial h2 {
+  height: 80vh;
+  background-attachment: fixed; }
+  .main .testimonial h2 {
     text-align: center;
     font-size: 3rem;
     color: #333;
-    font-weight: 500;
-    padding-top: 15px;
-    padding-bottom: 50px; }
-  .testimonial .container {
+    font-weight: 500; }
+  .main .testimonial .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; }
-    .testimonial .container article {
+    .main .testimonial .container article {
       background-color: #d75309;
       padding: 20px;
       color: white;
-      margin: 10px;
       flex: 0 0 25%; }
-      .testimonial .container article hgroup {
+      .main .testimonial .container article hgroup {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 20px 0px; }
-        .testimonial .container article hgroup h4 {
+        .main .testimonial .container article hgroup h4 {
           font-size: 1.5rem; }
-      .testimonial .container article p {
+      .main .testimonial .container article p {
         line-height: 1.8;
         font-size: 1.2rem; }
+  .main .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 40px; }
+    .main .container form {
+      flex: 0 0 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 70vh;
+      background-color: #d75309;
+      border-radius: 25px;
+      padding: 40px 20px; }
+      .main .container form input {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 1.2rem;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin: 10px; }
+        .main .container form input:focus {
+          border: 2px solid rgba(255, 136, 0, 0.911); }
+      .main .container form textarea {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 1.2rem;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin: 10px; }
+        .main .container form textarea:focus {
+          border: 2px solid rgba(255, 136, 0, 0.911); }
+      .main .container form button {
+        width: 40%;
+        border: none;
+        background-color: black;
+        color: white;
+        font-size: 1.1rem;
+        padding: 15px 0px;
+        border-radius: 10px;
+        margin-top: 40px; }
+        .main .container form button:hover {
+          background-color: #f1bb17;
+          transition: 0.6s ease;
+          border-radius: 25px; }
+
+.contact {
+  background-color: #222;
+  color: white;
+  padding: 20px 0px; }
+  .contact .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 50vh; }
+    .contact .container hgroup {
+      flex: 0 0 45%; }
+      .contact .container hgroup h2 {
+        font-size: 3.2rem;
+        font-weight: 500;
+        padding-bottom: 15px; }
+      .contact .container hgroup h3 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        padding-bottom: 15px; }
+      .contact .container hgroup p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        padding-top: 10px; }
+
+footer p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 20px; }
 
 /*# sourceMappingURL=style.css.map */
